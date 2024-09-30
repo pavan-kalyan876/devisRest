@@ -1,4 +1,7 @@
 from django.urls import path
-from .views import SimpleApi
+from . import views
 
-urlpatterns = [path("simple-api/", SimpleApi.as_view(), name="simple-api")]
+urlpatterns = [
+    path("", views.endPoint),
+    path("programers/", views.programer_list),
+]
